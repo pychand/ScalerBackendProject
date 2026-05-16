@@ -1,16 +1,16 @@
 package com.scalers.productserviceebatch.services;
 
 
+import com.scalers.productserviceebatch.exceptions.ProductNotFoundException;
+import com.scalers.productserviceebatch.models.Category;
 import com.scalers.productserviceebatch.models.Product;
-import org.springframework.stereotype.Service;
-
-import java.util.List;
+import org.springframework.data.domain.Page;
 
 public interface ProductService {
-    Product getProductById(long id);
-    List<Product> getAllProducts();
-    Product createProduct(Product product);
-    Product updateProduct(long id, Product product);
-    Product replaceProduct(long id, Product product);
-    void deleteProduct(long id);
+    Product getSingleProduct(Long id) throws ProductNotFoundException;
+    Page<Product> getAllProducts(int pageNumber, int pageSize, String fieldName) throws ProductNotFoundException;
+    Product createProduct(Long id, String title, String description, Double price, String category, String imageUrl);
+    Product deleteProduct(Long id) throws ProductNotFoundException;
+    Product updateProduct(Long id, String title, String description, Double price, Category category, String imageUrl) throws ProductNotFoundException;
+    //Product[] getAllProducts();
 }

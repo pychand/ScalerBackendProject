@@ -1,16 +1,16 @@
-package com.scalers.productserviceebatch.dtos;
+package com.scalers.productserviceebatch.models;
 
 import lombok.Getter;
 import lombok.Setter;
 
 @Getter
 @Setter
-public class FakeStoreProductDto {
+public class Product_Copy {
     private long id;
-    private String title;
+    private String name;
+    private Category category;
     private double price;
     private String description;
-    private String category;
     private String image;
-}
 
+}
