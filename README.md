@@ -179,6 +179,11 @@ Create the category first (POST `/category`) and use the returned `id` in the pr
 - Stripe and Razorpay API keys must be set in `application.properties` or provided through environment variables.
 - Stripe integration should set the API key once before all Stripe operations; do not switch keys between calls when creating related resources.
 
+
+## Additional Project Links:
+- Email Service and Kafka :  https://github.com/pychand/ScalerBackendEmailService
+- User Service and OAuth : https://github.com/pychand/scalerbackendprojectkafkaoauth
+
 ## 🛠 Troubleshooting & Tips
 
 - If you see `mvn: The term 'mvn' is not recognized`, run the Maven wrapper `.\mvnw.cmd` or install Maven and add it to your PATH.
